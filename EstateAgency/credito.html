@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EstateAgency - Crédito</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="property-grid.html">Property</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="credito.html">Crédito</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Intro -->
+    <section class="intro-single mt-5 pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">Calcule su Crédito</h1>
+              <span class="color-text-a">Complete los campos para calcular su crédito hipotecario y generar la proyección de pagos.</span>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Crédito</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de Crédito -->
+    <section class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form id="formularioVivienda">
+              <div class="row">
+
+                <div class="col-md-6 mb-3">
+                  <label for="correo">Correo electrónico</label>
+                  <input type="email" id="correo" class="form-control" placeholder="Correo">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" class="form-control" placeholder="Nombre completo">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                  <input type="date" id="fechaNacimiento" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="salario">Salario mensual</label>
+                  <input type="number" id="salario" class="form-control" placeholder="Salario neto mensual">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="tasaInteres">Tasa de Interés anual (%)</label>
+                  <input type="number" id="tasaInteres" class="form-control" value="7.10">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="plazo">Plazo (meses): <span id="valorPlazo">15</span></label>
+                  <input type="range" id="plazo" class="form-range" min="1" max="360" value="15">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="valorVivienda">Valor de la vivienda</label>
+                  <input type="number" id="valorVivienda" class="form-control" placeholder="Valor de la vivienda">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="montoSolicitar">Monto a solicitar (máx. 80% del valor)</label>
+                  <input type="number" id="montoSolicitar" class="form-control" placeholder="Monto a solicitar">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label>Pago Mensual</label>
+                  <input type="text" id="pagoMensual" class="form-control" readonly>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Salario Mínimo Requerido</label>
+                  <input type="text" id="salarioMinimo" class="form-control" readonly>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Estado Salario</label>
+                  <input type="text" id="estadoSalario" class="form-control" readonly>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Estado Edad</label>
+                  <input type="text" id="estadoEdad" class="form-control" readonly>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Porcentaje a Financiar</label>
+                  <input type="text" id="porcentajeFinanciar" class="form-control" readonly>
+                </div>
+
+                <div class="col-12 mb-3">
+                  <button type="button" id="btnGuardar" class="btn btn-primary me-2">Guardar Datos</button>
+                  <button type="button" id="btnProyeccion" class="btn btn-success">Mostrar Proyección</button>
+                </div>
+
+              </div>
+            </form>
+
+            <div id="contenedorProyeccion"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (igual que tu index.html) -->
+  <section class="section-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="text-brand">EstateAgency</h3>
+          <p>Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis sed aute irure.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>The Company</h3>
+        </div>
+        <div class="col-md-4">
+          <h3>International Sites</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      &copy; EstateAgency - Todos los derechos reservados
+    </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+     <!-- Tratando de solucionar cositas -->
+  <script src="assets/js/credito.js"></script>
+</body>
+</html>
